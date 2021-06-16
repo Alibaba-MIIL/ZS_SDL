@@ -54,7 +54,7 @@ python infer.py  \
 ```
 
 which will result in:
-#
+
 ![](./outputs/140016_215548610_422b79b4d7_m.jpg)
 
 Note that predicted "unseen" tags are indicated by * tag-name *.
@@ -62,7 +62,7 @@ Note that predicted "unseen" tags are indicated by * tag-name *.
 
 
 ## Training Code
-Coming soon...
+Training code will be available soon.
 
 
 ## Citation
