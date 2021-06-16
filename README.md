@@ -87,7 +87,8 @@ Coming soon...
 ```
 
 ## Acknowledgements
-Several images from NUS-WIDE dataset are used in this project (https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html)
+Several images from [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) dataset are used in this project.
+#
 Some components of this code implementation are adapted from the repository https://github.com/Alibaba-MIIL/ASL. 
 
 
