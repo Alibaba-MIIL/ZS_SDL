@@ -1,8 +1,6 @@
 # Semantic Diversity Learning for Zero-Shot Multi-label Classification
 
-
-
-[Pretrained models](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ZSL/NUS_mtresnet_224.pth?OSSAccessKeyId=LTAI4Fn4sgPQqdeTuWkvpq37&Expires=1623849620&Signature=cFn27nZ9lkiMZC107B8rnKaAR7s%3D)
+[Paper](https://arxiv.org/abs/2105.05926)
 
 Official PyTorch Implementation
 
@@ -38,7 +36,7 @@ implementation of our semantic diversity learning (SDL) loss for zero shot multi
 
 
 ## Pretrained Models
-We provide a pre-trained model on NUS-WIDE dataset, which can be found [here](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ZSL/NUS_mtresnet_224.pth?OSSAccessKeyId=LTAI4Fn4sgPQqdeTuWkvpq37&Expires=1623849620&Signature=cFn27nZ9lkiMZC107B8rnKaAR7s%3D) 
+We provide a pre-trained model on NUS-WIDE dataset, which can be found [here](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ZSL/NUS_mtresnet_224.pth) 
 
 
 ## Inference Code
