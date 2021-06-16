@@ -31,7 +31,7 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 
 
 
-## Semantic Diversiity Learning (SDL) Implementation
+## Semantic Diversity Learning (SDL) Implementation
 In this PyTorch [file](\src\loss_functions\SDL_loss.py), we provide an
 implementation of our semantic diversity learning (SDL) loss for zero shot multi-label classification.
 
