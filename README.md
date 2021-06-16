@@ -86,6 +86,11 @@ Coming soon...
 }
 ```
 
+## Acknowledgements
+Several images from NUS-WIDE dataset are used in this project (https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html)
+Some components of this code implementation are adapted from the repository https://github.com/Alibaba-MIIL/ASL. 
+
+
 ## Contact
 Feel free to contact if there are any questions or issues - Avi Ben-Cohen (avi.bencohen@alibaba-inc.com) or Emanuel
 Ben-Baruch (emanuel.benbaruch@alibaba-inc.com).
