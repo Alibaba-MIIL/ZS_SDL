@@ -28,7 +28,7 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 #
 
 <!-- ![](./photos/SDL_intro.png) -->
-<img src="./photos/SDL_Figure_2.png" width=70% height=70%>
+<img src="./photos/SDL_Figure_2.png" width=100% height=100%>
 <!-- <img src="./photos/SDL_intro.png" width=50% height=50%> -->
 
 
