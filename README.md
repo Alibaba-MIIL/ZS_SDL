@@ -28,7 +28,7 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 #
 
 <!-- ![](./photos/SDL_intro.png) -->
-![](./photos/SDL_intro.png =100x100)
+![](./photos/SDL_intro.png | width=100)
 
 
 ## Semantic Diversity Learning (SDL) Implementation
