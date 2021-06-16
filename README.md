@@ -93,6 +93,6 @@ Some components of this code implementation are adapted from the repository http
 We would like to thank Tal Ridnik for his valuable comments and suggestions.
 
 
-## Contact
+<!-- ## Contact
 Feel free to contact if there are any questions or issues - Avi Ben-Cohen (avi.bencohen@alibaba-inc.com) or Emanuel
-Ben-Baruch (emanuel.benbaruch@alibaba-inc.com).
+Ben-Baruch (emanuel.benbaruch@alibaba-inc.com). -->
