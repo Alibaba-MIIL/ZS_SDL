@@ -92,7 +92,7 @@ Several images from [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/20
 
 Some components of this code implementation are adapted from the repository https://github.com/Alibaba-MIIL/ASL.
 
-We would likt to thank Tal Ridnik for his valuable comments and suggestions.
+We would like to thank Tal Ridnik for his valuable comments and suggestions.
 
 
 ## Contact
