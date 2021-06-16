@@ -28,6 +28,7 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 #
 
 [comment]: <> (![]&#40;./photos/SDL_intro.png&#41;)
+![](./photos/SDL_intro.png)
 
 
 
