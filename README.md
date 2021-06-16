@@ -49,13 +49,13 @@ model, pre-process an image and do actuall inference. Example run:
 python infer.py  \
 --model_path=./models_local/NUS_mtresnet_224.pth \
 --model_name=tresnet_m \
---pic_path=./pics/45820_163934428_128e9cfe08_m.jpg \
+--pic_path=./pics/140016_215548610_422b79b4d7_m.jpg \
 --top_k=10 \
 ```
 
 which will result in:
 #
-![](./outputs/45820_163934428_128e9cfe08_m.jpg)
+![](./outputs/140016_215548610_422b79b4d7_m.jpg)
 
 Note that predicted "unseen" tags are indicated by * tag-name *.
 
