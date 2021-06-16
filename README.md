@@ -28,8 +28,7 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 #
 
 <!-- ![](./photos/SDL_intro.png) -->
-![](./photos/SDL_intro.png | width=100)
-
+<img src="./photos/SDL_intro.png" width=50% height=50%>
 
 ## Semantic Diversity Learning (SDL) Implementation
 In this PyTorch [file](https://github.com/Alibaba-MIIL/ZS_SDL/blob/main/src/loss_functions/SDL_loss.py), we provide an
