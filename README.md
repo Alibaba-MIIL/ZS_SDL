@@ -66,22 +66,13 @@ Training code will be available soon.
 
 ## Citation
 ```
-@article{DBLP:journals/corr/abs-2105-05926,
-  author    = {Avi Ben{-}Cohen and
-               Nadav Zamir and
-               Emanuel Ben Baruch and
-               Itamar Friedman and
-               Lihi Zelnik{-}Manor},
-  title     = {Semantic Diversity Learning for Zero-Shot Multi-label Classification},
-  journal   = {CoRR},
-  volume    = {abs/2105.05926},
-  year      = {2021},
-  url       = {https://arxiv.org/abs/2105.05926},
-  archivePrefix = {arXiv},
-  eprint    = {2105.05926},
-  timestamp = {Tue, 18 May 2021 18:46:40 +0200},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2105-05926.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@misc{bencohen2021semantic,
+      title={Semantic Diversity Learning for Zero-Shot Multi-label Classification}, 
+      author={Avi Ben-Cohen and Nadav Zamir and Emanuel Ben Baruch and Itamar Friedman and Lihi Zelnik-Manor},
+      year={2021},
+      eprint={2105.05926},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
