@@ -8,6 +8,15 @@ from ..utils.global_avg_pooling import GlobalAvgPool2dResNext
 from torch.nn import Linear
 
 
+def to_sdl(model, args):
+    # Add global_avg_pool and embedding matrix
+    num_features = model.num_features
+    model = model.body
+    model.add_module('global_avg_pool', GlobalAvgPool2dResNext())
+    model.add_module('embedding', Linear(num_features, args.num_rows * args.wordvec_dim, bias=False).cuda())
+    return model
+
+
 def create_model(args):
     """Create a model
     """
@@ -19,20 +28,17 @@ def create_model(args):
     model_params['args'].do_bottleneck_head = False
     model_params['args'].bottleneck_features = None
 
-    if args.model_name=='tresnet_m':
+    if args.model_name == 'tresnet_m':
         model = TResnetM(model_params)
-    elif args.model_name=='tresnet_l':
+    elif args.model_name == 'tresnet_l':
         model = TResnetL(model_params)
-    elif args.model_name=='tresnet_xl':
+    elif args.model_name == 'tresnet_xl':
         model = TResnetXL(model_params)
     else:
         print("model: {} not found !!".format(args.model_name))
         exit(-1)
 
-    # Add global_avg_pool and embedding matrix
-    num_features = model.num_features
-    model = model.body
-    model.add_module('global_avg_pool', GlobalAvgPool2dResNext())
-    model.add_module('embedding', Linear(num_features, args.num_rows * args.wordvec_dim, bias=False))
+    if not args.pretrain_backbone:
+        model = to_sdl(model, args)
 
     return model

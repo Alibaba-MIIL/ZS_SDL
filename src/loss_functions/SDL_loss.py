@@ -77,6 +77,7 @@ def calc_diversity(wordvec_array, y_i):
 
     return sig.sum()
 
+
 def var_regularization(x_i):
     sig2 = torch.var(x_i, dim=1)
     l1_err = torch.norm(sig2, dim=-1, p=1)
