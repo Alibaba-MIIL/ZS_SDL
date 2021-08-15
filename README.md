@@ -65,7 +65,7 @@ We provide a [training code](train.py), that can be used to train our model.
 - The annotations should be provided in COCO format.
 - To reproduce similar results to our paper results on COCO use the split provided in: [Zero-Shot Object Detection](https://ankanbansal.com/zsd.html).
 - The annotation files are expected to be in the metadata path under "zs_split" folder.
-- wordvec_array.pickle and cls_ids.pickle include coco word-vectors and seen-uneen class ids respectively, and should be located in the metadata path.
+- [wordvec_array.pickle](data/COCO/cls_ids.pickle) and cls_ids.pickle include coco word-vectors and seen-uneen class ids respectively, and should be located in the metadata path.
 - The pretrained imagenet based backbone can be downloaded [here](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/tresnet/tresnet_m.pth
 )
 - Run the following training args:
