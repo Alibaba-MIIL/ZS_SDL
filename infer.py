@@ -14,9 +14,10 @@ from src.loss_functions.SDL_loss import SDLLoss
 # Parameters
 parser = argparse.ArgumentParser(description='Zero shot learning with SDL pretrained model.')
 parser.add_argument('--model_path', type=str, default='./models_local/NUS_mtresnet_224.pth')
-parser.add_argument('--pic_path', type=str, default='./pics/45820_163934428_128e9cfe08_m.jpg')
+parser.add_argument('--pic_path', type=str, default='./pics/140016_215548610_422b79b4d7_m.jpg')
 parser.add_argument('--model_name', type=str, default='tresnet_m')
 parser.add_argument('--num_rows', type=int, default=7)
+parser.add_argument('--pretrain-backbone', type=int, default=0)
 parser.add_argument('--wordvec_dim', type=int, default=300)
 parser.add_argument('--input_size', type=int, default=224)
 parser.add_argument('--dataset_path', type=str, default='./data/NUS_WIDE')
@@ -82,7 +83,7 @@ def main():
     target = torch.zeros(batch_siz, args.num_classes)
     target[0, 40] = 1
     loss = loss_func.forward(output.cpu(), target.cpu())
-    print("Example loss: %0.2f", loss)
+    print("Example loss: %0.2f" % loss)
     print('Done\n')
 
 

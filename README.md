@@ -1,8 +1,8 @@
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/semantic-diversity-learning-for-zero-shot/multi-label-zero-shot-learning-on-nus-wide)](https://paperswithcode.com/sota/multi-label-zero-shot-learning-on-nus-wide?p=semantic-diversity-learning-for-zero-shot)
-
 # Semantic Diversity Learning for Zero-Shot Multi-label Classification
 
-[Paper](https://arxiv.org/abs/2105.05926)
+
+
+[Pretrained models](MODEL_ZOO.md)
 
 Official PyTorch Implementation
 
@@ -27,65 +27,79 @@ on several common datasets (NUS-Wide, COCO, Open Images).
 
 #
 
-<!-- ![](./photos/SDL_intro.png) -->
-<img src="./photos/SDL_Figure_2.png" width=100% height=100%>
-<!-- <img src="./photos/SDL_intro.png" width=50% height=50%> -->
+![](./photos/SDL_intro.png)
 
 
-## Semantic Diversity Learning (SDL) Implementation
-In this PyTorch [file](https://github.com/Alibaba-MIIL/ZS_SDL/blob/main/src/loss_functions/SDL_loss.py), we provide an
+
+## Semantic Diversiity Learning (SDL) Implementation
+In this PyTorch [file](src\loss_functions\SDL_loss.py), we provide an
 implementation of our semantic diversity learning (SDL) loss for zero shot multi-label classification.
 
 
 ## Pretrained Models
-We provide a pre-trained model on NUS-WIDE dataset, which can be found [here](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ZSL/NUS_mtresnet_224.pth) 
+We provide a pre-trained model on NUS-WIDE dataset, which can be found in TODO 
 
 
 ## Inference Code
 We provide an [inference code](infer.py), that demonstrates how to load our
-model, pre-process an image and do actuall inference. Example run:
+model, pre-process an image and do actual inference. Example run:
 
 
 ```
 python infer.py  \
 --model_path=./models_local/NUS_mtresnet_224.pth \
 --model_name=tresnet_m \
---pic_path=./pics/140016_215548610_422b79b4d7_m.jpg \
+--pic_path=./pics/45820_163934428_128e9cfe08_m.jpg \
 --top_k=10 \
 ```
 
 which will result in:
-
-![](./outputs/140016_215548610_422b79b4d7_m.jpg)
+#
+![](./outputs/45820_163934428_128e9cfe08_m.jpg)
 
 Note that predicted "unseen" tags are indicated by * tag-name *.
 
+### Training Code
+We provide a [training code](train.py), that can be used to train our model. 
+- The implementation in the provided training script is based on the [ASL repository](https://github.com/Alibaba-MIIL/ASL).
+- The annotations should be provided in COCO format.
+- To reproduce similar results to our paper results on COCO use the split provided in: [Zero-Shot Object Detection](https://ankanbansal.com/zsd.html).
+- The annotation files are expected to be in the metadata path under "zs_split" folder.
+- wordvec_array.pickle and cls_ids.pickle include coco word-vectors and seen-uneen class ids respectively, and should be located in the metadata path.
+- The pretrained imagenet based backbone can be downloaded [here](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/tresnet/tresnet_m.pth
+)
+- Run the following training args:
+```
+python train.py  \
+--data=./data/COCO/ \
+--model-path=./models/tresnet_m.pth \
+--image-size=608 \
+--pretrain-backbone=1 \
+```
 
-
-## Training Code
-Training code will be available soon.
-
+Note: the resolution is higher as we compared to object detection based methods that use similar or larger input size.
 
 ## Citation
 ```
-@misc{bencohen2021semantic,
-      title={Semantic Diversity Learning for Zero-Shot Multi-label Classification}, 
-      author={Avi Ben-Cohen and Nadav Zamir and Emanuel Ben Baruch and Itamar Friedman and Lihi Zelnik-Manor},
-      year={2021},
-      eprint={2105.05926},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{DBLP:journals/corr/abs-2105-05926,
+  author    = {Avi Ben{-}Cohen and
+               Nadav Zamir and
+               Emanuel Ben Baruch and
+               Itamar Friedman and
+               Lihi Zelnik{-}Manor},
+  title     = {Semantic Diversity Learning for Zero-Shot Multi-label Classification},
+  journal   = {CoRR},
+  volume    = {abs/2105.05926},
+  year      = {2021},
+  url       = {https://arxiv.org/abs/2105.05926},
+  archivePrefix = {arXiv},
+  eprint    = {2105.05926},
+  timestamp = {Tue, 18 May 2021 18:46:40 +0200},
+  biburl    = {https://dblp.org/rec/journals/corr/abs-2105-05926.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 
-## Acknowledgements
-Several images from [NUS-WIDE](https://lms.comp.nus.edu.sg/wp-content/uploads/2019/research/nuswide/NUS-WIDE.html) dataset are used in this project.
-
-Some components of this code implementation are adapted from the repository https://github.com/Alibaba-MIIL/ASL.
-
-We would like to thank Tal Ridnik for his valuable comments and suggestions.
-
-
-<!-- ## Contact
+## Contact
 Feel free to contact if there are any questions or issues - Avi Ben-Cohen (avi.bencohen@alibaba-inc.com) or Emanuel
-Ben-Baruch (emanuel.benbaruch@alibaba-inc.com). -->
+Ben-Baruch (emanuel.benbaruch@alibaba-inc.com).
