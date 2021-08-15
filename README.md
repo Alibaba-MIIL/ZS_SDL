@@ -1,8 +1,8 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/semantic-diversity-learning-for-zero-shot/multi-label-zero-shot-learning-on-nus-wide)](https://paperswithcode.com/sota/multi-label-zero-shot-learning-on-nus-wide?p=semantic-diversity-learning-for-zero-shot)
+
 # Semantic Diversity Learning for Zero-Shot Multi-label Classification
 
-
-
-[Pretrained models](MODEL_ZOO.md)
+[Paper](https://arxiv.org/abs/2105.05926)
 
 Official PyTorch Implementation
 
