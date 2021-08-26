@@ -1,31 +1,13 @@
 import os
-from copy import deepcopy
 import random
-import time
 from copy import deepcopy
 
 import numpy as np
 from PIL import Image
 from torchvision import datasets as datasets
 import torch
-import torch.nn.functional as F
 from PIL import ImageDraw
 from pycocotools.coco import COCO
-
-
-def parse_args(parser):
-    # parsing args
-    args = parser.parse_args()
-    if args.dataset_type == 'OpenImages':
-        args.do_bottleneck_head = True
-        if args.th == None:
-            args.th = 0.995
-    else:
-        args.do_bottleneck_head = False
-        if args.th == None:
-            args.th = 0.7
-    return args
-
 
 def get_only_relevant_gt(gt_labels, relevant_inds):
     if isinstance(gt_labels[0], list):
@@ -299,3 +281,9 @@ def add_weight_decay(model, weight_decay=1e-4, skip_list=()):
     return [
         {'params': no_decay, 'weight_decay': 0.},
         {'params': decay, 'weight_decay': weight_decay}]
+
+def set_random_seeds(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
